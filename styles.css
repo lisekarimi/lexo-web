@@ -61,10 +61,57 @@ body {
     font-weight: 500;
 }
 
+/* Header Actions */
+.header-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header-github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #24292e, #2f363d);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-github-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.header-github-btn:hover::before {
+    left: 100%;
+}
+
+.header-github-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(36, 41, 46, 0.4);
+    background: linear-gradient(45deg, #2f363d, #24292e);
+}
+
+.header-github-btn:active {
+    transform: translateY(-1px);
+}
+
 /* Certification Section */
 .certification-section {
-    margin-top: 15px;
-    padding: 15px;
+    padding: 20px;
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
     border-radius: 12px;
     border: 2px solid rgba(102, 126, 234, 0.2);
@@ -400,6 +447,7 @@ body {
     opacity: 0.9;
 }
 
+
 /* Key Features Section */
 .features-grid {
     display: grid;
@@ -420,6 +468,70 @@ body {
 .features-grid li {
     padding: 8px 0;
 }
+
+/* GitHub Star Button */
+.github-star-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.github-star-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #24292e, #2f363d);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.github-star-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.github-star-btn:hover::before {
+    left: 100%;
+}
+
+.github-star-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(36, 41, 46, 0.4);
+    background: linear-gradient(45deg, #2f363d, #24292e);
+}
+
+.github-star-btn:active {
+    transform: translateY(-1px);
+}
+
+.star-icon {
+    font-size: 1.2em;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.star-text {
+    font-weight: 600;
+}
+
 
 /* Footer */
 .footer {
@@ -447,6 +559,140 @@ body {
 
 .footer p {
     margin-top: 20px;
+}
+
+/* Professional Footer */
+.professional-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 40px 30px 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    color: #ecf0f1;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link.linkedin:hover {
+    background: rgba(0, 119, 181, 0.2);
+    border-color: rgba(0, 119, 181, 0.4);
+}
+
+.social-link.github:hover {
+    background: rgba(36, 41, 46, 0.2);
+    border-color: rgba(36, 41, 46, 0.4);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.social-text {
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    padding: 4px 0;
+}
+
+.project-links a:hover {
+    color: #667eea;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    color: #95a5a6;
+    font-size: 0.85em;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: #7f8c8d !important;
 }
 
 /* Responsive Design */
@@ -557,6 +803,24 @@ body {
         padding: 20px;
     }
 
+    .professional-footer {
+        padding: 30px 20px 15px;
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-link {
+        padding: 8px 14px;
+        font-size: 0.85em;
+    }
+
     .code-block pre {
         font-size: 0.8em;
         padding: 10px;
@@ -658,6 +922,30 @@ body {
     .certification-btn {
         padding: 8px 16px;
         font-size: 0.8em;
+    }
+
+    .professional-footer {
+        padding: 25px 15px 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-link {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+    .project-links {
+        align-items: center;
     }
 }
 
