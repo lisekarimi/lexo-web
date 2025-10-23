@@ -1,5 +1,6 @@
 FROM nginx:alpine
 
-COPY index.html styles.css /usr/share/nginx/html/
+# Copy all website files
+COPY index.html styles.css favicon.ico og-image.png robots.txt sitemap.xml /usr/share/nginx/html/
 
 EXPOSE 80
